@@ -19,7 +19,7 @@ RUN git clone https://github.com/madil88/masterless_minion.git gitfile
 RUN mv gitfile/masterless.conf /etc/salt/minion.d/masterless.conf
 
 RUN mv gitfile/salt /srv/
-
+RUN mv gitfile/salt-standalone-cron /etc/cron.d/salt-standalone-cron
 
 
 
