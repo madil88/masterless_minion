@@ -2,7 +2,7 @@ install_apache:
   pkg.installed:
      - name: apache2
   service.running:
-     - name apache2
+     - name: apache2
      - enable: True
 
 files:
