@@ -21,6 +21,7 @@ RUN mv /srv/gitfile/masterless.conf /etc/salt/minion.d/masterless.conf
 RUN mv /srv/gitfile/salt /srv/
 RUN mkdir  /etc/cron.d
 RUN /bin/mv /srv/gitfile/salt-standalone-cron /etc/cron.d/salt-standalone-cron
-RUN salt-call --local state.highstate
+ENV PATH /usr/bin:$PATH
+RUN /usr/bin/salt-call --local state.highstate
 
 
