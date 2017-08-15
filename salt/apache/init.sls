@@ -1,9 +1,12 @@
 install_apache:
   pkg.installed:
      - name: apache2
+service_check:
   service.running:
      - name: apache2
      - enable: True
+     - require:
+        - pkg: install_apache
 
 files:
    file.managed:
